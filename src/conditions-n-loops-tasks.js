@@ -71,8 +71,16 @@ function getMaxNumber(a, b, c) {
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  */
-function canQueenCaptureKing(/* queen, king */) {
-  throw new Error('Not implemented');
+function canQueenCaptureKing(queen, king) {
+  if (
+    queen.x === king.x ||
+    queen.y === king.y ||
+    queen.x - king.x === queen.y - king.y ||
+    queen.x - king.x === king.y - queen.y
+  ) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -93,8 +101,18 @@ function canQueenCaptureKing(/* queen, king */) {
  *  2, 2, 5   => false
  *  3, 0, 3   => false
  */
-function isIsoscelesTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isIsoscelesTriangle(a, b, c) {
+  if (a === 0 || b === 0 || c === 0) {
+    return false;
+  }
+  if (
+    (a === b && a + b > c) ||
+    (a === c && a + c > b) ||
+    (b === c && b + c > a)
+  ) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -111,8 +129,125 @@ function isIsoscelesTriangle(/* a, b, c */) {
  *  10  => X
  *  26  => XXVI
  */
-function convertToRomanNumerals(/* num */) {
-  throw new Error('Not implemented');
+function convertToRomanNumerals(num) {
+  if (num === 1) {
+    return 'I';
+  }
+  if (num === 2) {
+    return 'II';
+  }
+  if (num === 3) {
+    return 'III';
+  }
+  if (num === 4) {
+    return 'IV';
+  }
+  if (num === 5) {
+    return 'V';
+  }
+  if (num === 6) {
+    return 'VI';
+  }
+  if (num === 7) {
+    return 'VII';
+  }
+  if (num === 8) {
+    return 'VIII';
+  }
+  if (num === 9) {
+    return 'IX';
+  }
+  if (num === 10) {
+    return 'X';
+  }
+  if (num === 11) {
+    return 'XI';
+  }
+  if (num === 12) {
+    return 'XII';
+  }
+  if (num === 13) {
+    return 'XIII';
+  }
+  if (num === 14) {
+    return 'XIV';
+  }
+  if (num === 15) {
+    return 'XV';
+  }
+  if (num === 16) {
+    return 'XVI';
+  }
+  if (num === 17) {
+    return 'XVII';
+  }
+  if (num === 18) {
+    return 'XVIII';
+  }
+  if (num === 19) {
+    return 'XIX';
+  }
+  if (num === 20) {
+    return 'XX';
+  }
+  if (num === 21) {
+    return 'XXI';
+  }
+  if (num === 22) {
+    return 'XXII';
+  }
+  if (num === 23) {
+    return 'XXIII';
+  }
+  if (num === 24) {
+    return 'XXIV';
+  }
+  if (num === 25) {
+    return 'XXV';
+  }
+  if (num === 26) {
+    return 'XXVI';
+  }
+  if (num === 27) {
+    return 'XXVII';
+  }
+  if (num === 28) {
+    return 'XXVIII';
+  }
+  if (num === 29) {
+    return 'XXIX';
+  }
+  if (num === 30) {
+    return 'XXX';
+  }
+  if (num === 31) {
+    return 'XXXI';
+  }
+  if (num === 32) {
+    return 'XXXII';
+  }
+  if (num === 33) {
+    return 'XXXIII';
+  }
+  if (num === 34) {
+    return 'XXXIV';
+  }
+  if (num === 35) {
+    return 'XXXV';
+  }
+  if (num === 36) {
+    return 'XXXVI';
+  }
+  if (num === 37) {
+    return 'XXXVII';
+  }
+  if (num === 38) {
+    return 'XXXVIII';
+  }
+  if (num === 39) {
+    return 'XXXVIX';
+  }
+  return '';
 }
 
 /**
